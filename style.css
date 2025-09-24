@@ -211,6 +211,7 @@ img {
 
 .hero h1 .highlight {
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background-clip: text; /* standard property for compatibility */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
