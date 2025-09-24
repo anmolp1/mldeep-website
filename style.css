@@ -1,5 +1,5 @@
 /*
- * Global styles for the DataVantage one‑pager.
+ * Global styles for the MLDeep one‑pager.
  * The palette uses deep purples with lighter gradients for a modern, tech‑focused aesthetic.
  */
 
@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Futura', sans-serif;
     color: var(--text-light);
     background: linear-gradient(180deg, var(--background-start), var(--background-end));
     line-height: 1.6;
@@ -59,7 +59,7 @@ img {
     left: 0;
     right: 0;
     background: rgba(0, 0, 20, 0.75);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(5px);
     z-index: 999;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -85,7 +85,7 @@ img {
 .logo img.logo-img {
     height: auto;
     min-width: auto;
-    max-width: 100px;
+    max-width: 150px;
     display: block;
 }
 
