@@ -14,7 +14,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>MLDeep - Data-Driven Intelligence</title>
     <!-- Google font for a modern, clean look -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -314,7 +313,7 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input name="email" type="email" id="email" placeholder="your@email.com" required />
+                        <input name="_replyto" type="email" id="email" placeholder="your@email.com" required />
                     </div>
                     <div class="form-group">
                         <label for="company">Company</label>
@@ -322,7 +321,7 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="5" placeholder="Tell us about your project and how we can help..." required></textarea>
+                        <textarea name="message" id="message" rows="5" placeholder="Tell us about your project and how we can help..."></textarea>
                     </div>
 
                     <!-- Optional extras -->
@@ -346,22 +345,14 @@
                             const res = await fetch(form.action, {
                                 method: form.method,
                                 body: data,
-                                headers: { 'Accept': 'application/json' },
-                                mode: 'cors',
-                                referrerPolicy: 'strict-origin-when-cross-origin'
+                                headers: { 'Accept': 'application/json' }
                             });
                             if (res.ok) {
                                 statusEl.textContent = "Thanks! We'll be in touch soon.";
                                 form.reset();
                             } else {
-                                let msg = 'Oops—there was a problem. Please try again.';
-                                try {
-                                    const err = await res.json();
-                                    if (err?.errors && Array.isArray(err.errors) && err.errors.length) {
-                                        msg = err.errors.map(e => (e.field ? `${e.field} ${e.message}` : e.message)).join(', ');
-                                    }
-                                } catch {}
-                                statusEl.textContent = msg;
+                                const err = await res.json().catch(() => ({}));
+                                statusEl.textContent = err?.errors?.[0]?.message || 'Oops—there was a problem. Please try again.';
                             }
                         } catch (_) {
                             statusEl.textContent = 'Network error. Please try again.';
