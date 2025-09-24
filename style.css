@@ -17,6 +17,11 @@
     --footer-border: rgba(255, 255, 255, 0.08);
 }
 
+/* Smooth in-page scrolls */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -76,10 +81,12 @@ img {
     gap: 0.4rem;
 }
 
-/* Size the logo image in the header */
+/* Logo sizing in navbar */
 .logo img.logo-img {
-  height: auto;
-  width: 150px;
+    height: auto;
+    min-width: auto;
+    max-width: 100px;
+    display: block;
 }
 
 .nav-menu ul {
@@ -684,6 +691,30 @@ section .section-subtitle {
 }
 
 /* Responsive tweaks */
+
+/* Mobile-friendly navbar spacing */
+/* @media (max-width: 480px) {
+    .nav-menu ul {
+        gap: 1rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.9rem;
+    }
+
+    .small-btn {
+        padding: 0.45rem 0.8rem;
+    }
+
+    .logo img.logo-img {
+        height: 22px;
+    }
+
+    section {
+        scroll-margin-top: 80px;
+    }
+} */
+
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.4rem;
