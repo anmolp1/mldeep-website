@@ -67,12 +67,19 @@ img {
 }
 
 .logo {
-    display: flex;
+    /* display: flex;
     align-items: center;
     font-size: 1.4rem;
     font-weight: 600;
     gap: 0.4rem;
-    color: var(--primary-color);
+    color: var(--primary-color); */
+    gap: 0.4rem;
+}
+
+/* Size the logo image in the header */
+.logo img.logo-img {
+  height: auto;
+  width: 150px;
 }
 
 .nav-menu ul {
