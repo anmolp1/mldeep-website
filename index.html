@@ -59,7 +59,24 @@
             <h1>Transform Your Business<br />with <span class="highlight">Data-Driven Intelligence</span></h1>
             <p>We're a cutting-edge management consulting firm specializing in analytics, AI solutions and intelligent automation. Empowering businesses across the globe to make smarter decisions.</p>
             <div class="cta-buttons">
-                <a href="https://calendar.app.google/ebttpWW5efCSzY2D6" class="btn btn-primary">Get Started Today</a>
+                <!-- <a href="https://calendar.app.google/ebttpWW5efCSzY2D6" class="btn btn-primary">Get Started Today</a> -->
+                <!-- Google Calendar Appointment Scheduling begin -->
+                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                <script>
+                    (function () {
+                        var target = document.currentScript;
+                        window.addEventListener('load', function () {
+                            calendar.schedulingButton.load({
+                                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3Is4RmEU731jF4MDmFbumXkqDk1HZTXkoOSqW9zcnOxv26Mb55EMUijiy7PprKqI0cTyYxMbx4?gv=true',
+                                color: '#5741d9',
+                                label: "Get Started Today",
+                                target,
+                            });
+                        });
+                    })();
+                </script>
+                <!-- end Google Calendar Appointment Scheduling -->
                 <a href="#services" class="btn btn-secondary">Learn More</a>
             </div>
             <!-- <div class="stats">
