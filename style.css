@@ -720,6 +720,65 @@ section .section-subtitle {
     background-color: #1877f2;
 }
 
+/* Ecosystem / Partners */
+.ecosystem {
+    padding: 64px 0;
+}
+
+.ecosystem-inner {
+    display: grid;
+    gap: 24px;
+}
+
+.ecosystem-header h2 {
+    margin: 0 0 8px;
+    color: #ffffff;
+}
+
+.ecosystem-header {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.ecosystem-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(6px);
+}
+
+.ecosystem-logo {
+    width: 200px;
+    height: auto;
+    flex: 0 0 auto;
+    border-radius: 10px;
+    /* makes badge pop */
+    padding: 10px;
+}
+
+.ecosystem-text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .ecosystem-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ecosystem-logo {
+        width: 140px;
+    }
+}
+
 /* Responsive tweaks */
 
 @media (max-width: 768px) {
